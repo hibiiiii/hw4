@@ -1,10 +1,10 @@
 // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
-Highcharts.chart('container', {
+ Highcharts.chart('container', {
     chart: {
         type: 'spline'
     },
     title: {
-        text: 'Monthly Average Temperature'
+        text: '月平均氣溫'
     },
     subtitle: {
         text: 'Source: ' +
@@ -12,15 +12,15 @@ Highcharts.chart('container', {
             'target="_blank">Wikipedia.com</a>'
     },
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        categories: ['一月', '二月', '三月', '四月', '五月', '六月',
+            '七月', '八月', '九月', '十月', '十一月', '十二月'],
         accessibility: {
             description: 'Months of the year'
         }
     },
     yAxis: {
         title: {
-            text: 'Temperature'
+            text: '溫度'
         },
         labels: {
             format: '{value}°'
@@ -40,7 +40,7 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Tokyo',
+        name: '東京',
         marker: {
             symbol: 'square'
         },
@@ -55,7 +55,7 @@ Highcharts.chart('container', {
         }, 22.8, 17.5, 12.1, 7.6]
 
     }, {
-        name: 'Bergen',
+        name: '卑爾根',
         marker: {
             symbol: 'diamond'
         },
@@ -68,5 +68,19 @@ Highcharts.chart('container', {
                 description: 'Snowy symbol, this is the coldest point in the chart.'
             }
         }, 1.6, 3.3, 5.9, 10.5, 13.5, 14.5, 14.4, 11.5, 8.7, 4.7, 2.6]
+    }, {
+        name: '臺北',
+        marker: {
+            symbol: 'round'
+        },
+        data: [16.6,17.2,19.0,22.5,25.8,28.3, {
+            y:30.1,
+            marker: {
+                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+            },
+            accessibility: {
+                description: 'Sunny symbol, this is the warmest point in the chart.'
+            }
+        }, 29.7,27.8,24.7,22.0,18.2]
     }]
 });
